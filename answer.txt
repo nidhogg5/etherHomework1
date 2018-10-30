@@ -1,0 +1,27 @@
+1. Please compare hash function and cryptographic hash function and give an example.
+
+    cryptographic hash function是hash function的一種
+    比其他hash function保障更多安全屬性
+    一個理想的cryptographic hash function有四個特性
+        a. 對於任何一個給定的訊息，它都很容易就能運算出雜湊數值。
+        b. 難以由一個已知的雜湊數值，去推算出原始的訊息。
+        c. 在不更動雜湊數值的前提下，修改訊息內容是不可行的。
+        d. 對於兩個不同的訊息，它不能給與相同的雜湊數值。
+
+    其他非cryptographic hash function的hash function
+    可能會為了犧牲一些安全性換取更快的速度
+
+
+Bonus 1. What is HD Wallet, BIP32, BIP39 and BIP44?
+
+    HD Wallet：用同一個seed產生多個key的概念
+    使用上只要保存一個seed就可以備份多筆子key
+    BIP32, BIP39 and BIP44是在HD Wallet在Bitcoin上實做標準
+
+    BIP32：定義 Hierarchical Deterministic wallet
+    一個seed可以產生樹狀結構的多組key
+
+    BIP39：將seed用12個英文單字組成，方便記憶和儲存
+    稱mnemonic code或助記碼
+
+    BIP44：擴充BIP32，讓同一個seed可以產生其他幣種的key
